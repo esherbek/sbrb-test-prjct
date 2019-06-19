@@ -1,27 +1,25 @@
-# SbrbTestPrjct
+# Тестовый проект Сбербанка
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+Добрый день!
+---
+Предлагаю вам собственноручно разработать форму для заполнения и работы со списком отправлений подобную той, что сейчас используется в Удостоверяющем центре. В текущией форме множество недоработок, которые сказываются на качестве работы с ней, в частности отсутствует фильтрация по отдельным полям среди отправлений; слабая проверка правильности ввода значений в поля формы и т.п.
 
-## Development server
+Ожидается, что результатом данной работы будет модуль [`journal`](./src/app/journal/journal.module.ts), состоящий из компонентов, разделяющих зоны ответственности при построении формы (поля ввода, отображение отправления, отображение реестра, и т.п.). А также [сервис](./src/app/journal/dataservice.service.ts) для взаимодействия с данными генерируемыми в классе [mockdata](./src/app/mockdata.ts).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Поведение формы следующее: сервис загружает и отображает список реестров, раскрывающийся при клике и подгружающий в себя список отправлений (сервис должен принимать `номер реестра` и фильтровать массив для выдачи правильных значений). Каждое отправление также должно содержать форму редактирования отображаемую по требованию и сохраняющую данные через сервис.
 
-## Code scaffolding
+Выглядель модуль может как угодно, лишь бы работал и было понятно куда нажимать.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Любой результат выполнения будет принят и рассмотрен с точки зрения как оригинальности подхода, так и следования принятым практикам подробно описаным на angular.io.
 
-## Build
+Прошу написать весь код в отдельную ветку, создав ее следующим образом:
+``` 
+    git checkout -b <myname> 
+```
+После окончания работ запульте ветку в гит
+```
+    git add .
+    git commit -m 'work_done'
+    git push origin <myname>
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
